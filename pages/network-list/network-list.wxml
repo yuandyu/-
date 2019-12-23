@@ -1,0 +1,14 @@
+<!--pages/network-list/network-list.wxml-->
+<view class="chy-network-top">
+  <view bindtap="regionalChoice" style="flex: 1">
+    <text class="text">{{city}}</text><van-icon name="arrow-down" />
+  </view>
+  <view style="flex: 3">
+    <van-search value="{{ nodeName }}" custom-class="custom-class" shape="round" background="#00a0e9" placeholder="请输入车海洋网点名称" bind:search="bindSearch" />
+  </view>
+</view>
+<regional-choice wx:if="{{condition}}" bindcustomevent="anotherEventListener" />
+<network nodeList="{{nodeList}}" noMore="{{noMore}}" wx:if="{{!condition}}" />
+<include src="/components/network-bottom/network-bottom"  wx:if="{{!condition}}"></include>
+<no-more wx:if="{{nodeList.length === 0 && !condition}}" />
+<include src="/components/toast/mylogin"></include>

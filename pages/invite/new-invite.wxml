@@ -1,0 +1,37 @@
+<!--pages/invite/new-invite.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view style="font-size:0;">
+  <van-image width="100%" height="520rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-1.png" />
+  <van-image width="100%" height="529rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-2.png" />
+  <view style="background: #ffc672; padding: 20rpx; text-align: center;">
+    <button type="primary" size="small" open-type="share" class="new-invite-buttom" style="width:660rpx; height: 90rpx; padding: 0;background: #ffc672; border-color: #ffc672;">
+      <van-image width="660rpx" height="90rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-button.png" />
+    </button>
+  </view>
+  <van-image width="100%" height="895rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-3.png" />
+  <van-image width="100%" height="520rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-4.png" />
+  <view class="new-invite-relative">
+  <view class="new-invite-box">
+      <van-image width="660rpx" height="80rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-5.png" />
+       <view class="new-invite-nav">
+        <view class="new-invite-title">
+          <view>好友手机号</view>
+          <view>邀请时间</view>
+        </view>
+        <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" scroll-left="50rpx;" style="max-height: 720rpx;">
+          <block wx:if="{{ list.length !== 0 }}">
+            <view class="new-invite-info" wx:for="{{list}}" wx:key="index">
+              <view>{{item.FriendMobile}}</view>
+              <view>{{datecut.msgtime(item.CreateTime)}}</view>
+            </view>
+          </block>
+          <view wx:else style="text-align: center; padding-top: 20rpx;">
+            <van-image width="310rpx" height="380rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-7.png" />
+          </view>
+        </scroll-view>
+       </view>
+      <van-image width="660rpx" height="36rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/new-invite-6.png" />
+  </view>
+  </view>
+  
+</view>

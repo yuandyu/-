@@ -1,0 +1,17 @@
+/* pages/problem/problem.wxss */
+.problem_nav view{
+  padding: 10rpx;
+}
+.myVideo{
+  width: 100%;
+}
+.problem_top{
+  background: #fff; padding: 15rpx 30rpx;
+}
+.problem_top_1{
+  font-size: 30rpx; color: red;
+  padding-bottom: 10rpx;
+}
+.problem_top_2{
+
+}

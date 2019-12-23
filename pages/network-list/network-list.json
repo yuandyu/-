@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "车海洋网点",
+  "backgroundColor": "#00a0e9",
+  "usingComponents": {
+    "network": "/components/network/network",
+    "regional-choice": "/components/regional-choice/regional-choice",
+    "van-search": "@vant/weapp/search/index"
+  }
+}

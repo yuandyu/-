@@ -1,0 +1,9 @@
+<!--components/regional-choice/regional-choice.wxml-->
+<view class="regional-choice">
+  <scroll-view class="regional-choice-scroll" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <view class="regional-choice-view {{select.province === item ? 'active' : ''}}" bindtap="provinceClick" data-province="{{item}}" wx:for="{{province_list}}" wx:key="index" data-pId="{{item.pId}}">{{item.name}}</view>
+  </scroll-view>
+  <scroll-view  class="regional-choice-scroll" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <view class="regional-choice-view {{select.city === item ? 'active' : ''}}" bindtap="cityClick" style="margin-left: 25rpx;" data-city="{{item.name}}" data-id="{{item.id}}" wx:for="{{city_list}}" wx:key="index" >{{item.name}}</view>
+  </scroll-view>
+</view>

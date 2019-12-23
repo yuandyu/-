@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/network-list/network-list",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/network-details/network-details",
+    "pages/mine/mine",
+    "pages/cost-logs/cost-logs",
+    "pages/recharge/recharge",
+    "pages/recharge-logs/recharge-logs",
+    "pages/feedback/feedback",
+    "pages/feedback/success",
+    "pages/news/news",
+    "pages/navigation/navigation",
+    "pages/protocol/protocol",
+    "pages/problem/problem",
+    "pages/invite/invite",
+    "pages/invite-logs/invite-logs",
+    "pages/coupon/coupon",
+    "pages/news/news-details",
+    "pages/change-password/change-password",
+    "pages/coupon/coupon-details",
+    "pages/invite/new-invite"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0098fe",
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "WeChat"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "no-more": "/components/no-more/no-more",
+    "no-msg": "/components/no-msg/no-msg"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx1045ed196b15f9ca"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "洗车券",
+  "usingComponents": {
+    "van-overlay": "@vant/weapp/overlay/index"
+  }
+}

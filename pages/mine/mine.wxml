@@ -1,0 +1,92 @@
+<!--pages/mine/mine.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view class="mine-top">
+  <view class="mine-user" wx:if="{{loginStatus}}">
+    <view>
+      <image src="{{userInfo.headimgurl}}" class="mine-image"></image>
+    </view>
+    
+    <view class="mine-user-info">
+      <view class="mine-user-name" style="">
+        <text>{{userInfo.nickname}}</text>
+        <van-image data-url="/pages/news/news" bindtap="navigator" width="40rpx" height="40rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/news_icon_notices.png" wx:if="{{userInfo.NoticesCount}}" />
+        <van-image data-url="/pages/news/news" bindtap="navigator" width="40rpx" height="40rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/news_icon.png" wx:else />
+
+      </view>
+      <view class="mine-user-phone" wx:if="{{userInfo.Mobile1}}">{{datecut.hidePhone(userInfo.Mobile1)}}</view>
+      <view class="mine-user-phone" wx:else data-type="get_phone_number" bindtap="myLogin">获取手机号</view>
+    </view>
+  </view>
+  <view class="mine-user" bindtap="myLogin" data-type="user_info_show" wx:else>
+    <view>
+      <image src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/headimgurl.png" class="mine-image"></image>
+    </view>
+    <view class="mine-user-name" style=" padding-left: 20rpx;">未登陆</view>
+  </view>
+  <view class="mine-balance">
+    <view class="mine-balance-box" data-url="/pages/recharge-logs/recharge-logs" bindtap="navigator">
+      <view class="mine-balance-value">{{userInfo.Balance || 0}}</view>
+      <view class="mine-balance-name">余额</view>
+    </view>
+    <view class="mine-balance-box" data-url="/pages/coupon/coupon" bindtap="navigator">
+      <view class="mine-balance-value">{{userInfo.TicketCount || 0}}</view>
+      <view class="mine-balance-name">洗车券</view>
+    </view>
+    <view class="mine-balance-box">
+      <view class="mine-balance-value">{{userInfo.Credit || 0}}</view>
+      <view class="mine-balance-name">积分</view>
+    </view>
+  </view>
+</view>
+
+<view class="mine-operating">
+  <view class="mine-operating-box">
+    <view data-url="/pages/recharge/recharge" bindtap="navigator" hover-class="navigator-hover">
+      <image src="/images/mine_recharge_icon.png" class="mine-operating-image"></image>
+      <view class="mine-operating-name">我要充值</view>
+    </view>
+  </view>
+  <view class="mine-operating-box">
+    <view data-url="/pages/recharge-logs/recharge-logs" bindtap="navigator" hover-class="navigator-hover">
+      <image src="/images/mine_recording_icon.png" class="mine-operating-image"></image>
+      <view class="mine-operating-name">充值记录</view>
+    </view>
+  </view>
+  <view class="mine-operating-box">
+    <view data-url="/pages/cost-logs/cost-logs" bindtap="navigator" hover-class="navigator-hover">
+      <image src="/images/mine_consumption_icon.png" class="mine-operating-image"></image>
+      <view class="mine-operating-name">消费记录</view>
+    </view>
+  </view>
+</view>
+
+<chy-swipe banner="{{banner}}" height="180" />
+
+
+<view class="mine-mt-15">
+  <van-cell-group>
+    <van-cell title="操作指南" icon="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/1.png" value="洗车操作指南" is-link url="/pages/problem/problem" />
+    <van-cell title="邀请好友" icon="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/2.png" value="邀好友赢免费洗车券" is-link data-url="/pages/invite/new-invite" bind:click="navigator" data-type="phone" data-type="get_phone_number" />
+    <van-cell title="免费停车" icon="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/3.png" is-link bind:click="navigator" />
+  </van-cell-group>
+</view>
+
+<view class="mine-mt-15">
+  <van-cell-group>
+    <van-cell title="服务协议" icon="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/4.png" is-link url="/pages/protocol/protocol" />
+    <van-cell title="意见反馈" data-url="/pages/feedback/feedback" icon="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/5.png" is-link bind:click="navigator" />
+    <van-cell title="设置密码" icon="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/6.png" is-link data-url="/pages/change-password/change-password" bind:click="navigator" data-type="phone" data-type="get_phone_number" />
+  </van-cell-group>
+</view>
+
+<view class="mine-mt-15">
+  <van-cell-group class="mine-mt-15">
+    <van-cell title="退出登录" bindtap="exit" icon="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/7.png" is-link>
+      <!-- <navigator slot="title" open-type="exit" target="miniProgram" bindtap="exit" bindsuccess="bindsuccess">
+        <view class="van-cell-text">退出登录</view>
+      </navigator> -->
+    </van-cell>
+  </van-cell-group>
+</view>
+
+<include src="/components/toast/mylogin"></include>

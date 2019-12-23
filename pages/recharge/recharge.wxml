@@ -1,0 +1,22 @@
+<!--pages/recharge/recharge.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view class="recharge-top">
+  <view class="recharge-sum">{{userInfo.Balance}}</view>
+  <view class="recharge-sum-text">账户余额（元）</view>
+  <view class="recharge-sum-text" style="padding-top: 20rpx;">充值账户：{{datecut.hidePhone(userInfo.Mobile1) || '暂未绑定'}}</view>
+</view>
+<view class="recharge-image">
+  <chy-swipe banner="{{banner}}" height="250" />
+</view>
+<view class="recharge-amount">
+  <text class="recharge-amount-text">充值金额：</text>
+  <view class="recharge-amount-button">
+  <block wx:for="{{amount}}" wx:key="{{index}}">
+  <van-button type="info" class="button" size="large" plain="{{!item.select}}" custom-style="border-color: #0099ff; {{item.select ? 'background-color: #0099ff' : ''}}" bind:click="buttonClick" data-item="{{item}}">{{item.rechargeAmount}}元</van-button>
+  </block>
+    
+  </view>
+</view>
+<view style="padding: 50rpx 20rpx;">
+  <van-button type="info" size="large" round custom-style="border-color: #0099ff; background-color: #0099ff;"  bind:click="pay">立即支付</van-button>
+</view>

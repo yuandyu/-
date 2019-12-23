@@ -1,0 +1,31 @@
+/* pages/feedback/feedback.wxss */
+page{
+  background-color: #f5f5fa;
+}
+.feedback-top{
+  color: #999999;
+  font-size: 24rpx;
+  padding: 20rpx 40rpx;
+  background-color: #f5f5fa;
+}
+.feedback-box-bg{
+  padding: 30rpx;
+  background-color: #ffffff;
+}
+.feedback-button{
+  display: flex;
+  flex-wrap: wrap;
+}
+.feedback-button .button{
+  padding-bottom: 20rpx;
+  width: 25%;
+}
+.feedback-field{
+  min-height: 200rpx;
+}
+.feedback-uploader{
+  padding-top: 20rpx;
+}
+.feedback-custom-class{
+  background-color: #0099ff;
+}

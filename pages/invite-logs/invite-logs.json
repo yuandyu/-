@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "邀请记录",
+  "navigationBarBackgroundColor": "#0098fe",
+  "navigationBarTextStyle": "white",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "no-msg": "/components/no-msg/no-msg"
+  }
+}

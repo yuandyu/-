@@ -1,0 +1,11 @@
+<!--components/no-more/no-more.wxml-->
+<view style="display: flex;align-items: center;width: 100vw;margin-top: 60rpx;flex-direction: column;">
+  <view>
+    <van-image
+      width="500rpx"
+      height="480rpx"
+      fit="contain"
+      src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/no-more.png"
+    />
+  </view>
+</view>

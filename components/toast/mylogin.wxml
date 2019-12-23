@@ -1,0 +1,56 @@
+<van-popup show="{{ user_info_show }}" round close-on-click-overlay="true" bind:click-overlay="clickOverlay" custom-style="width: 80%; text-align: center; padding: 50rpx 0;" >
+  <view>
+    <van-image
+      width="162rpx"
+      height="162rpx"
+      round
+      src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/logo.png"
+    />
+    <view class="chy-popup-title">车海洋智能洗车</view>
+  </view>
+  <view style="padding: 0 60rpx">
+    <van-button type="primary" bindgetuserinfo="bindgetuserinfo" open-type="getUserInfo" custom-style="width: 100%;">微信授权登陆</van-button>
+  </view>
+  <view class="chy-popup-checkbox">
+     <navigator url="/pages/protocol/protocol" class="chy-popup-navigator">授权登陆即表示同意<text class="chy-popup-protocol">《车海洋智能洗车服务协议》</text></navigator>
+  </view>
+
+</van-popup>
+
+
+<van-popup show="{{ get_phone_number }}" round close-on-click-overlay="true" bind:click-overlay="clickOverlay" custom-style="width: 80%; text-align: center; padding: 50rpx 0;" >
+  <view>
+    <van-image
+      width="162rpx"
+      height="162rpx"
+      round
+      src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/logo.png"
+    />
+    <view class="chy-popup-title">车海洋智能洗车</view>
+  </view>
+  <view style="padding: 0 60rpx">
+    <van-button type="primary" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber" custom-style="width: 100%;">授权获取手机号</van-button>
+  </view>
+</van-popup>
+
+<van-popup show="{{coreQrShow}}" custom-style="border-radius: 10rpx; overflow-y: visible; width: 580rpx;background-color: rgba(0,0,0,0);" bind:close="coreQrShowClose" class="network-bottom-popup">
+
+  <view catchtouchmove='banScroll'>
+    <image class="network-bottom-header" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/logo2.png"></image>
+
+    <view class="network-popup-info">
+      <!-- <view class="network-popup-left"></view> -->
+      <view class="network-popup-name">{{userInfo.Mobile1 || '未绑定手机号'}}</view>
+      <view class="network-popup-money">{{userInfo.Balance}}</view>
+      <view class="network-popup-text">账户余额（元）</view>
+    </view>
+    <image src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/network-popup.png" class="network-popup-image"></image>
+    <view class="network-bottom-qr">
+      <!-- <image class="qr-code" src="https://img.yzcdn.cn/vant/cat.jpeg" ></image> -->
+      <view class="qr-code" style=" height:{{user_qrcode_w}}rpx;">
+        <canvas class="qr-code-canvas" canvas-id="myQrcode"  style="width:{{user_qrcode_w}}rpx; height:{{user_qrcode_w}}rpx; margin-left: -{{user_qrcode_w / 2}}rpx;"></canvas>
+      </view>
+      <view class="qr-code-text">请在网点洗车机扫码启动设备</view>
+    </view>
+  </view>
+</van-popup>

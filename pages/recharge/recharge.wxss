@@ -1,0 +1,40 @@
+/* pages/recharge/recharge.wxss */
+
+.recharge-top{
+  background-color: #0099ff;
+  text-align: center;
+  padding: 40rpx 0;
+}
+.recharge-sum{
+  color: #ffe400;
+  font-size: 60rpx;
+}
+.recharge-sum-text{
+  color: #fff;
+  font-size: 32rpx;
+  /* padding-top: 20rpx; */
+}
+.recharge-image{
+  width: 710rpx;
+  margin: 20rpx;
+  border-radius: 20rpx;
+}
+.recharge-amount{
+  padding: 0 20rpx;
+}
+.recharge-amount-text{
+  color: #7d7d7d;
+  font-size: 32rpx;
+}
+.recharge-amount-button{
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+   flex-flow: row wrap;
+}
+.recharge-amount-button .button{
+   flex: 0 0 32%;
+   text-align: center;
+   padding-top: 15rpx;
+}
+

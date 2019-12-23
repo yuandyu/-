@@ -1,0 +1,102 @@
+.chy-popup-checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70rpx;
+  font-size: 24rpx;
+}
+.chy-popup-title{
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 80rpx;
+}
+.chy-popup-navigator{
+  padding-left: 10rpx;
+}
+.chy-popup-protocol{
+  color: #0099ff;
+}
+
+.network-bottom-popup{
+  text-align: center;
+  
+}
+.network-bottom-header{
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  border-radius: 50%;
+  top: -60rpx;
+  left: 50%;
+  margin-left: -60rpx;
+  z-index: 1111;
+  display: block;
+  border: 2px solid #0099ff;
+}
+
+.network-popup-info{
+  /* width: 580rpx; */
+  background-color: #fff;
+  color: #000000;
+  position: relative;
+  width: 100%;
+}
+.network-popup-name{
+  font-size: 36rpx;
+  color: #000000;
+  padding-top: 70rpx;
+}
+.network-popup-money{
+  color: #000000;
+  font-size: 56rpx;
+  padding-top: 20rpx;
+}
+.network-popup-text{
+  font-size: 30rpx;
+  color: #000000;
+  padding: 10rpx 0 20rpx 0;
+}
+.network-bottom-left{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: var(--overlay-background-color,rgba(0,0,0,.7));
+  border-radius: 50%;
+  position: relative;
+  top: 306rpx;
+  left: -20rpx;
+}
+.network-popup-image{
+  width: 100%;
+  height: 36rpx;
+  vertical-align:middle;
+  display: block;
+}
+
+.network-bottom-qr{
+  background-color: #fff;
+}
+.network-popup-left{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: rgba(0,0,0,.7);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20rpx;
+  left: -20rpx;
+}
+.qr-code{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+  width: 100%;
+  position: relative;
+}
+.qr-code-canvas{
+  position: absolute;
+  left: 50%;
+}
+.qr-code-text{
+  font-size: 26rpx;
+  color: #000;
+  padding-bottom: 40rpx;
+}

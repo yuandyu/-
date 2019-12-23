@@ -1,0 +1,9 @@
+<!--pages/news/news-list.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view class="news-list-top van-hairline--bottom">
+  <view class="title">{{content.Name}}</view>
+  <view class="time">{{datecut.timeDate(content.PublishTime)}}</view>
+</view>
+<view class="rich-text">
+  <rich-text nodes="{{content.NoticeContent}}"></rich-text>
+</view>

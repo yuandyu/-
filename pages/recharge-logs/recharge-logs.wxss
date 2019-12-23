@@ -1,0 +1,65 @@
+/* pages/recharge-logs/recharge-logs.wxss */
+/* pages/costlog/costlog.wxss */
+.rechargelogs-head{
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  height: 80rpx;
+  font-size: 28rpx;
+}
+.balance{
+  padding-left: 35rpx;
+  display: flex;
+  margin-right: 130rpx;
+}
+.rechargesum{
+  padding-right: 35rpx;
+  display: flex;
+}
+.money{
+  color: #0098fe;
+  font-weight:bold;
+}
+.logs{
+  height: 130rpx;
+  display: flex;
+}
+.pic{
+  width: 115rpx;
+  height: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.pic1{
+  background-color: #0098fe;
+  height: 85rpx;
+  width: 85rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 27rpx;
+}
+.msg{
+  width: 82%;
+  height: 130rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logs-top{
+  margin-left: 15rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.name{
+  font-weight:bold;
+}
+.times{
+  margin-left: 15rpx;
+  color: #6c6c6c;
+  font-size: 27rpx;
+}

@@ -1,0 +1,20 @@
+/* pages/network-list/network-list.wxss */
+@import "../../components/network/network.wxss";
+@import "../../components/network-bottom/network-bottom.wxss";
+.chy-network-top{
+  color: #fff;
+  padding: 30rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  background-color: #0098fe;
+  justify-content: space-between;
+  position: sticky;
+  top: 0
+}
+.chy-network-top .text{
+  padding-right: 10rpx;
+}
+.custom-class{
+  padding: 0 !important;
+}

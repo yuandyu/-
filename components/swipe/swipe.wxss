@@ -1,0 +1,7 @@
+/* components/swipe/swipe.wxss */
+.mine-ad{
+  margin-top: 15rpx;
+  width: 100%;
+  height: 211rpx;
+  display: inherit;
+}

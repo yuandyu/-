@@ -1,0 +1,5 @@
+/* components/no-more/no-more.wxss */
+.no-more{
+  text-align: center;
+  padding-bottom: 15rpx;
+}

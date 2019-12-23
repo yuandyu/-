@@ -1,0 +1,27 @@
+<!--pages/cost-logs/cost-logs.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view>
+  <view class="cost-head">
+    <view class="balance">账号余额：
+      <view class="money">￥{{datecut.returnFloat(balance)}}</view>
+    </view>
+    <view class="costsum">消费总额：
+      <view class="money">￥{{datecut.returnFloat(sumeAmount)}}</view>
+    </view>
+  </view>
+  <no-msg wx:if="{{consumelist.length === 0 }}" message="暂无消费记录" />
+  <block wx:else>
+    <view class="logs" wx:for="{{consumelist}}" wx:key="{{index}}">
+      <view class="pic">
+        <view class="pic1">{{datecut.namestrs(item.TypeName)}}</view>
+      </view>
+      <view class="msg">
+        <view class="logs-top">
+          <view class="name">{{item.CarwasherName}}</view>
+          <view class="money">￥{{datecut.returnFloat(item.ConsumeAmount)}}</view>
+        </view>
+        <view class="times">{{datecut.timeDate(item.ConsumeDate)}}</view>
+      </view>
+    </view>
+  </block>
+</view>

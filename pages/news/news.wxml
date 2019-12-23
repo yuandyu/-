@@ -1,0 +1,29 @@
+<!--pages/news/news.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view style="  background-color: #f1f1f1; padding: 30rpx 0;">
+  <view class="news-tab">
+    <view class="news-tabs {{state !== 1 ? 'active': ''}}" data-state="{{2}}" bindtap="bindState">未读消息</view>
+    <view class="news-tabs {{state === 1 ? 'active2': ''}}" data-state="{{1}}" bindtap="bindState">已读消息</view>
+  </view>
+</view>
+
+<view class="news-nav">
+  <navigator class="news-nva-box" wx:for="{{Rows}}" wx:key="{{index}}" url="/pages/news/news-details?sid={{item.SID}}" hover-class="navigator-hover">
+    <view>
+      <image 
+    class="news-image" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/news_icon.png"></image>
+    </view>
+    <view class="news-right">
+      <view class="news-right-nav">
+        <view class="name">{{item.Name}}</view>
+        <view class="time">{{datecut.timeDate(item.PublishTime)}}</view>
+      </view>
+      <view>
+        <van-icon name="arrow" />
+      </view>
+    </view>
+  </navigator>
+</view>
+<view class="no-content" wx:if="{{noContent}}">
+  <image class="no-content-yet" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/no_content_yet.png"></image>
+</view>

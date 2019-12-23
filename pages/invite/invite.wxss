@@ -1,0 +1,25 @@
+/* pages/invite/invite.wxss */
+page{
+  background-color: #3b6edc;
+}
+.invite_code{
+  width: 246rpx;
+  height: 246rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  position: absolute;
+  bottom: 250rpx;
+  left: 50%;
+  margin-left: -123rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.invite_bg{
+  position: relative;
+}
+.invite_button{
+  margin: 20rpx;
+  
+}

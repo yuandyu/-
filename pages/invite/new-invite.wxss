@@ -1,0 +1,49 @@
+/* pages/invite/new-invite.wxss */
+page{
+  background-color: #ffc672;
+}
+.new-invite-buttom::after {
+  border-color: #ffc672;
+}
+
+.new-invite-buttom {
+  width: 660rpx;
+  height: 90rpx;
+  padding: 0;
+  background: #ffc672;
+  border-color: #ffc672;
+}
+.new-invite-relative{
+  position: relative;
+  top: -440rpx;
+  
+}
+.new-invite-box{
+  width: 660rpx;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -330rpx;
+  margin-bottom: 30rpx;
+}
+.new-invite-nav{
+  font-size: 36rpx;
+  padding: 0 40rpx;
+  background-color: #fff;
+}
+
+.new-invite-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 60rpx 0 20rpx 0;
+  color: #000;
+  border-bottom: 1px dashed #b3b3b3;
+}
+.new-invite-info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #666666;
+  line-height: 2.4em;
+}

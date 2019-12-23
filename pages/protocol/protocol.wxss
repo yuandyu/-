@@ -1,0 +1,29 @@
+/* pages/protocol/protocol.wxss */
+page{
+  background-color: #fff;
+  padding: 20rpx;
+}
+view{
+  text-indent:2em;
+  font-size: 26rpx;
+  color: #424542;
+  line-height: 1.6em;
+  padding-bottom: 10rpx;
+}
+.fs-b{
+  font-weight: bold;
+  color: #1f1f1f;
+}
+.fs_xhx{
+  text-decoration:underline;
+}
+.fs_bg{
+  background-color: yellow;
+}
+.protocol_title{
+  color: #0199ff;
+  text-align: center;
+  font-size: 32rpx;
+  padding-bottom: 10rpx;
+  font-weight: bold;
+}

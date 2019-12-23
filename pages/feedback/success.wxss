@@ -1,0 +1,20 @@
+/* pages/feedback/success.wxss */
+.feedback-success{
+  text-align: center;
+}
+.feedback-success-image{
+  width: 180rpx;
+  height: 180rpx;
+  margin-top: 220rpx;
+}
+.feedback-success-text{
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: 600;
+  padding-top: 50rpx;
+}
+.feedback-success-text1{
+  font-size: 24rpx;
+  color: #666;
+  padding-top: 10rpx;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "消费记录",
+  "navigationBarBackgroundColor": "#0098fe",
+  "navigationBarTextStyle": "white",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "no-msg": "/components/no-msg/no-msg"
+  }
+}

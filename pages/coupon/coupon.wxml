@@ -1,0 +1,32 @@
+<!--pages/coupon/coupon.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<van-tabs active="{{ state }}" bind:change="onChange" color="#09f" sticky>
+  <van-tab wx:for="{{tabs}}" name="{{tab.value}}" wx:for-item="tab" title="{{tab.name}}" wx:key="{{tab.value}}">
+    <block wx:if="{{couponList.length !== 0}}">
+      <block wx:for="{{couponList}}" wx:key="{{index}}">
+        <view class="{{item.State === 1 ? 'coupon-unused': 'coupon-use'}} coupon" data-id="{{item.SID}}" data-state="{{item.State}}" bindtap="getCouponVoucher">
+          <view class="coupon-left">
+            <view class="coupon-left-text">
+              <view>
+                <text class="money">¥{{item.Amount}}元</text>
+                <text class="text">洗车券</text>
+              </view>
+              <view class="claim">没有限定</view>
+              <view class="time">{{datecut.msgtime(item.LimitStartDate)}}至{{datecut.msgtime(item.LimitEndDate)}}</view>
+            </view>
+          </view>
+          <view class="coupon-right">
+            <view class="coupon-right-box">
+              <view class="status">{{item.State === 1 ? '立即使用' : (item.State === 4 ? '已经过期' : '已经使用')}}</view>
+              
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <no-msg />
+    </block>
+  </van-tab>
+</van-tabs>
+<include src="/components/toast/mylogin"></include>

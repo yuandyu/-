@@ -1,0 +1,28 @@
+<!--components/swipe/swipe.wxml-->
+<swiper 
+  indicator-dots="{{banner.length > 1 ? true:false}}"
+  circular="true"
+  indicator-active-color="#0099ff"
+  style="height: {{height}}rpx"
+  autoplay="true">
+  <block wx:for="{{banner}}" wx:key="{{index}}">
+    <swiper-item>
+      <navigator target="miniProgram" open-type="navigate" app-id="{{item.appId}}" data-appId="{{item.appId}}" wx:if="{{item.appId !== ''}}">
+        <van-image
+          width="100%"
+          height="{{height}}rpx"
+          fit="fill"
+          src="{{item.url}}"
+        />
+      </navigator>
+      <navigator url="{{item.path}}" wx:else>
+        <van-image
+          width="100%"
+          height="{{height}}rpx"
+          fit="fill"
+          src="{{item.url}}"
+        />
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>

@@ -1,0 +1,29 @@
+<!--components/list/network.wxml-->
+<view class="network-box">
+  <block wx:for="{{nodeList}}" wx:key="{{index}}">
+    <navigator class="network-nav" url="/pages/network-details/network-details?id={{item.SID}}&distance={{item.Distance}}" hover-class="navigator-hover">
+      <view>
+        <image src="http://cloud.chehaiyang.com/Content/mobile/img/placedef.jpg" class="network-image"></image>
+      </view>
+      <view class="network-right">
+        <view class="network-title">{{item.NodeName}}</view>
+        <view class="network-content">
+          <view class="network-status open">{{item.NodeStateName}}</view>
+          <!-- <view class="network-status maintain" wx:else>维护中</view> -->
+          <view class="network-content-km">
+            <view class="network-content-km-text">
+              <image src="/images/network_amount_icon.png" class="image"></image>
+              <text>{{item.CarWasherCount}}台</text>
+            </view>
+            <view class="network-content-km-text" style="padding-left: 30rpx;">
+              <image src="/images/network_navigation_icon.png" class="image"></image>
+              <text>{{item.Distance}}km</text>
+            </view>
+          </view>
+        </view>
+        <view class="network-address">{{item.Address}}</view>
+      </view>
+    </navigator>
+  </block>
+</view>
+<view style="height: 140rpx;"></view>

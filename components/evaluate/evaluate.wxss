@@ -1,0 +1,57 @@
+/* components/evaluate/evaluate.wxss */
+.evaluate{
+  display: flex;
+  flex-direction:column;
+  padding-right: 25rpx;
+  padding-left: 25rpx;
+  border: 1px solid #e6e6e6;
+  border-radius: 30rpx;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  box-shadow: 0 0 8px #e6e6e6;
+}
+.evaluate-box{
+  display: flex;
+  padding-top: 25rpx;
+  padding-bottom: 10rpx;
+}
+.box1{
+  width: 120rpx;
+}
+.user-pic{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #019fe9;
+}
+.box2{
+  width: 86%;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #f5f4f7;
+}
+.user-name{
+  font-weight:bold;
+}
+.evaluate-level{
+  display: flex;
+  justify-content: space-between;
+  height: 30rpx;
+  font-size: 28rpx;
+  color: #adadad;
+}
+.msg{
+  margin-top: 18rpx;
+  font-size: 28rpx;
+  line-height: 160%;
+}
+.evaluate-pic{
+  padding-top: 20rpx;
+}
+.nodata{
+  display: flex;
+  justify-content: center;
+}
+.nodata-msg{
+  margin-top: 100rpx;
+}

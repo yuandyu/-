@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#0099ff",
+  "navigationBarTitleText": "洗车充值",
+  "usingComponents": {
+    "chy-swipe": "/components/swipe/swipe"
+  }
+}

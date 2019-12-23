@@ -1,0 +1,69 @@
+<!--pages/problem/problem.wxml-->
+<view class="problem_top">
+  <view class="problem_top_1">严禁未成年人使用洗车设备</view>
+  <view bindtap="telCall">服务热线：4008-366-899</view>
+</view>
+<van-collapse value="{{ activeNames }}" bind:change="onChange" accordion>
+  <van-collapse-item title="会员注册" name="1">
+    <view class="problem_nav">
+      <view>1、关注【车海洋智能洗车】公众号：微信扫一扫洗车机上二维码，点击关注；</view>
+      <view>2、点击【会员中心】-【账户（注册）】：点击微信底下菜单【会员中心】-【账户（注册）】</view>
+      <view>3、输入【手机号】和【密码】</view>
+      <view>4、输入图形验证码，点击【获取短信验证码】</view>
+      <view>5、填写手机收到的【验证码】</view>
+      <view>6、完成注册，充值洗车</view>
+      <view>7、注：如收不到短信，请在60秒后获取语音短信验证码，或联系车海洋客服协助注册</view>
+    </view>
+  </van-collapse-item>
+  <van-collapse-item title="会员充值" name="2">
+    <view class="problem_nav">
+      <view>1、打开车海洋微信公众号【车海洋智能洗车】</view>
+      <view>2、点击【我要洗车】-【洗车充值】</view>
+      <view>3、进入充值页面后选择您要充值的金额</view>
+      <view>4、点击【立即支付】完成支付，输入支付密码即可</view>
+      <view>5、注：微信只能使用微信支付；若需要支付宝充值需要登陆我司官网www.chehaiyang.com，点击首页右上角的会员充值，输入账号和密码，选择微信支付或者支付宝支付，按照页面提示操作即可。</view>
+    </view>
+  </van-collapse-item>
+  <van-collapse-item title="洗车流程" name="3">
+    <view class="problem_nav">
+      <view>1、账号登陆或刷会员卡：输入账号和密码登录，按确认，或刷会员卡直接登录；</view>
+      <view>2、喷清水润湿车身：按清水键后拿清水枪冲水，与车表面成45°角，离车身20-30厘米左右，简单冲洗，完成后按回清水键暂停；</view>
+      <view>3、喷泡沫擦拭车身：按泡沫键后拿泡沫枪喷泡沫，车表面成45°角，离车身1米左右，拿泡沫枪沿车身快速旋转一圈（最好20秒内打完），完成后按回泡沫键暂停，然后用洗车刷擦洗车身；</view>
+      <view>4、喷清水冲走泡沫：按清水键后拿清水枪从车顶开始冲水，完成后按回清水键暂停；</view>
+      <view>5、用毛巾擦干车身：冲洗干净后，用毛巾轻轻抹干车身；</view>
+      <view>6、车内吸尘：按吸尘键后拿吸尘管吸尘，用完后按回吸尘键暂停；</view>
+      <view>7、臭氧消毒：按消毒键后拿消毒管放进车内连接空调开启内循环，关上车门(留一个可把管伸进去的小缝隙，持续2-5分钟)，然后按回杀毒键暂停；</view>
+      <view>8、结算（注：如设备上无对应功能或不使用该功能可跳过）</view>
+    </view>
+  </van-collapse-item>
+  <van-collapse-item title="注意事项" name="4">
+    <view class="problem_nav">
+      <view>1、请勿将喷头朝向人、动物、电器设备或带电物体进行喷射；</view>
+      <view>2、未成年人禁止使用；</view>
+      <view>3、在全部洗车流程完成后，记得及时按结算键；</view>
+      <view>4、雷雨天气禁用；</view>
+      <view>5、当发现设备有异常或故障时，请停止使用并请及时通知商家。</view>
+    </view>
+  </van-collapse-item>
+  <van-collapse-item title="教学视频" name="5">
+    <view class="problem_nav">
+      <view>1、自助洗车教程</view>
+      <video class="myVideo" id="myVideo1" data-index="1" bindplay="bindplay" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/video/CHY-5.mp4" enable-danmu controls></video>
+    </view>
+
+    <view class="problem_nav">
+      <view>2、一机双位洗车教程</view>
+      <video class="myVideo" data-index="2" id="myVideo2" bindplay="bindplay" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/video/CHY-8-Q.mp4" enable-danmu controls></video>
+    </view>
+
+    <view class="problem_nav">
+      <view>3、全自动洗车教程</view>
+      <video class="myVideo" data-index="3" id="myVideo3" bindplay="bindplay" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/video/CHY-7-Q.mp4" enable-danmu controls></video>
+    </view>
+
+    <view class="problem_nav">
+      <view>4、带毛刷自动洗车机洗车流程</view>
+      <video class="myVideo" data-index="4" id="myVideo4" bindplay="bindplay" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/video/CHY-New-Q.mp4" enable-danmu controls></video>
+    </view>
+  </van-collapse-item>
+</van-collapse>

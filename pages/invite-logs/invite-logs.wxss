@@ -1,0 +1,58 @@
+/* pages/invite-logs/invite-logs.wxss */
+.cost-head{
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  height: 80rpx;
+  font-size: 28rpx;
+}
+.balance{
+  padding-left: 35rpx;
+  display: flex;
+  margin-right: 130rpx;
+}
+.costsum{
+  padding-right: 35rpx;
+  display: flex;
+}
+.money{
+  color: #0098fe;
+  font-weight:bold;
+}
+.logs{
+  height: 130rpx;
+  display: flex;
+}
+.pic{
+  width: 115rpx;
+  height: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.pic1{
+}
+.msg{
+  width: 82%;
+  height: 130rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logs-top{
+  margin-left: 15rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.times{
+  margin-left: 15rpx;
+  color: #6c6c6c;
+  font-size: 27rpx;
+}
+.state{
+  display: flex;
+  justify-content: space-between;
+  color: #6c6c6c;
+  font-size: 27rpx;
+}

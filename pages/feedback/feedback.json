@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#0098fe",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "意见反馈",
+  "backgroundColor": "#f5f5fa",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
+}

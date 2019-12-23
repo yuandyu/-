@@ -1,0 +1,41 @@
+<!--components/evaluate/evaluate.wxml-->
+<view class="evaluate">
+  <view class="evaluate-box" wx:for="{{msglist}}" wx:key="{{index}}">
+    <view class="box1">
+      <view class="user-pic">
+        <image class="user-pic" src="{{item.headimgurl}}"></image>
+      </view>
+    </view>
+    <view class="box2">
+      <view class="evaluate-msg">
+        <view class="user-name">{{item.nickname}}</view>
+        <view class="evaluate-level">
+          <view class="level">
+            <van-rate 
+              size="{{ 15 }}"
+              readonly 
+              color="#ee5c32" 
+              value="{{ item.Score }}" 
+              bind:change="onChange" />
+          </view>
+          <view class="time">{{datecut.msgtime(item.CreateTime)}}</view>
+        </view>
+        <view class="msg">
+          {{item.Comment}}
+        </view>
+      </view>
+      <view class="evaluate-pic" wx:if="{{item.Photo != null }}">
+        <van-grid column-num="3" border="{{ false }}" gutter="{{1}}" square>
+          <van-grid-item use-slot wx:for="{{item.Photo}}" wx:key="index" data-img="{{item}}" bindtap="showPopup">
+            <van-image 
+              width="180rpx"
+              height="180rpx"
+              fit="fill"
+              src="{{IMG_HEAD}}{{item}}"
+            />
+          </van-grid-item>
+        </van-grid>
+      </view>
+    </view>
+  </view>
+</view>

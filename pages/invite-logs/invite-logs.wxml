@@ -1,0 +1,38 @@
+<!--pages/invite-logs/invite-logs.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view>
+  <view class="cost-head">
+    <view class="balance">邀请总人数:
+      <view class="money">{{sum}}人</view>
+    </view>
+    <view class="costsum" wx:if="{{false}}">收益总额:
+      <view class="money">100元</view>
+    </view>
+  </view>
+  <no-msg message="暂无邀请记录" wx:if="{{sun == 0}}" />
+  <block wx:if="{{sum !== 0 }}">
+    <view class="logs" wx:for="{{list}}" wx:key="index" >
+      <view class="pic">
+        <view class="pic1">
+          <van-image
+            width="85rpx"
+            height="85rpx"
+            round
+            cover
+            src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/logo.png" 
+            />
+        </view>
+      </view>
+      <view class="msg">
+        <view class="logs-top">
+          <view class="name">{{item.FriendMobile}}</view>
+          <view class="money" wx:if="{{false}}">￥1.00</view>
+        </view>
+        <view class="state">
+          <view class="times">{{datecut.timeDate(item.CreateTime)}}</view>
+          <view class="invite-sta">邀请成功</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

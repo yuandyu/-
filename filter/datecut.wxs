@@ -1,0 +1,47 @@
+var datesettle = {
+  timeDate: function (time) {
+    var strs;
+    strs = time.split(".")[0].replace("T", " ");
+    return strs;
+  },
+  namedate: function (name) {
+    var namestrs;
+    if (name == null) {
+      return namestrs = "洗车机";
+    }else{
+      namestrs = name.slice("0","3");
+      return namestrs;
+      }
+  },
+  msgtime: function (time) {
+    var str;
+    str = time.split("T")[0];
+    return str;
+  },
+  returnFloat: function (value){
+    var value = (parseFloat(value) * 100) / 100;
+    var s = value.toString().split(".");
+    if (s.length == 1) {
+      value = value.toString() + ".00";
+      return value;
+    }
+    if (s.length > 1) {
+      if (s[1].length < 2) {
+        value = value.toString() + "0";
+      }
+      return value;
+    }
+  },
+  hidePhone: function(value){
+    if (value !== ''){
+      return value.replace(value.substring(3, 7), "****");
+    }
+  }
+}
+module.exports = {
+  timeDate: datesettle.timeDate,
+  namestrs: datesettle.namedate,
+  msgtime: datesettle.msgtime,
+  returnFloat: datesettle.returnFloat,
+  hidePhone: datesettle.hidePhone
+}

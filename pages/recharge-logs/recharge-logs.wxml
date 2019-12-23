@@ -1,0 +1,28 @@
+<!--pages/recharge-logs/recharge-logs.wxml-->
+<wxs src="../../filter/datecut.wxs" module="datecut"></wxs>
+<view>
+  <view class="rechargelogs-head">
+    <view class="balance">账号余额:
+      <view class="money">￥{{datecut.returnFloat(balance)}}</view>
+    </view>
+    <view class="rechargesum">充值总额:
+      <view class="money">￥{{datecut.returnFloat(rechargesums)}}</view>
+    </view>
+  </view>
+  <no-msg  wx:if="{{balance == 0}}" message="暂无充值记录" />
+  <block wx:if="{{balance !== 0}}">
+    <view class="logs" wx:for="{{rechargelist}}" wx:key="{{index}}" >
+      <view class="pic">
+        <view class="pic1"><image class="pic1" src="/images/recharge_logo.png" /></view>
+      </view>
+      <view class="msg">
+        <view class="logs-top">
+          <view class="name">{{item.Description}}</view>
+          <view class="money">￥{{datecut.returnFloat(item.ChargeInFact)}}</view>
+        </view>
+        <view class="times">{{datecut.timeDate(item.ChargeDate)}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+<include src="/components/toast/toast.wxml"/>

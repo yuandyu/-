@@ -1,0 +1,71 @@
+/* components/network-bottom/network-bottom.wxss */
+.network-bottom{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 25rpx 0;
+  background: #fff;
+  border-top: 1px solid #dfdfdf;
+}
+.network-bottom-nav{
+  text-align: center;
+}
+.scancode-icon{
+  width: 52rpx;
+  height: 50rpx;
+}
+.network-bottom-image{
+  width: 52rpx;
+  height: 52rpx;
+}
+.network-bottom-text{
+  font-size: 22rpx;
+  color: #6c6c6c;
+}
+.scan-code{
+  color: #fff;
+  width: 340rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0098fe;
+}
+
+.network-bottom-popup{
+  text-align: center;
+  
+}
+.network-bottom-qr:after {
+  content: "";
+  width: 32rpx;
+  height: 32rpx;
+  background-color: red;
+  
+}
+
+.network-bottom-left{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: var(--overlay-background-color,rgba(0,0,0,.7));
+  border-radius: 50%;
+  position: relative;
+  top: 306rpx;
+  left: -20rpx;
+}
+
+
+
+.network-popup-left{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: rgba(0,0,0,.7);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20rpx;
+  left: -20rpx;
+}

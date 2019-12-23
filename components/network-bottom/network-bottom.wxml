@@ -1,0 +1,22 @@
+<!--components/network-bottom/network-bottom.wxml-->
+<view class="network-bottom">
+  <view class="network-bottom-nav" style="width: 20%;" bindtap="scan">
+    <navigator target="miniProgram" open-type="navigate" app-id="wx1045ed196b15f9ca">
+      <image src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/mine_icon/shop_icon.png" class="network-bottom-image"></image>
+      <view class="network-bottom-text">商城</view>
+    </navigator>
+  </view>
+  <view class="scan-code" bindtap="myLogin" data-type="user_info_show" wx:if="{{!loginStatus}}">
+    <text>登陆</text>
+  </view>
+  <view class="scan-code" bindtap="scanCodeShow" wx:else>
+    <image src="/images/network_scancode_icon.png" class="scancode-icon"></image>
+    <text style="padding-left: 20rpx;">扫码洗车</text>
+  </view>
+  <view class="network-bottom-nav" style="width: 20%;">
+    <navigator url="/pages/mine/mine" hover-class="navigator-hover" style="width: 100%;">
+      <image src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/network_mine_icon.png" class="network-bottom-image"></image>
+      <view class="network-bottom-text">我的</view>
+    </navigator>
+  </view>
+</view>

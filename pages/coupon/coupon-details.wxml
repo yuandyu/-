@@ -1,0 +1,34 @@
+<!--pages/coupon/coupon-details.wxml-->
+<view class="coupon-details-top">
+  <view class="coupon-details-bg">
+    <view>请在网点洗车机扫码启动设备</view>
+    <view class="coupon-details-canvas-box">
+      <view class="coupon-details-canvas-nav" style="width:{{qrcode_w}}rpx; height:{{qrcode_w}}rpx;" >
+     
+        <canvas class="coupon-details-canvas" canvas-id="myQrcode" style="width:{{qrcode_w}}rpx; height:{{qrcode_w}}rpx;" wx:if="{{!canvasImg}}"></canvas>
+        <image class="coupon-details-canvas" style="width:{{qrcode_w}}rpx; height:{{qrcode_w}}rpx;" src="{{canvasImg}}" wx:else></image>
+      </view>
+    </view>
+    <view class="coupon-details-button">
+      <van-image width="222rpx" height="67rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/coupon-refresh.png" bindtap="getCouponVoucher" />
+      <van-image width="262rpx" height="67rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/coupon-account.png" bindtap="showCouponAccount" />
+    </view>
+  </view>
+</view>
+<view>
+  <van-image width="100%" height="884rpx" src="https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/coupon_bg.png" />
+</view>
+
+<van-popup bind:close="onClose" show="{{ show }}" close-on-click-overlay="{{true}}" round custom-style="border-radius: 20rpx; width: 490rpx;">
+    <view class="coupon-details-popup" catchtouchmove='banScroll'>
+      <view class="coupon-details-popup-title">提示</view>
+      <view class="coupon-details-popup-nav">
+        <view class="coupon-details-popup-text">账号：{{LoginName}}</view>
+        <view class="coupon-details-popup-text">密码：{{Password}}</view>
+        <view class="coupon-details-popup-button">
+          <van-button round type="info" size="small" custom-style="width: 300rpx; height: 70rpx; background-color: #09f; font-size: 36rpx;" bind:click="onClose">确定</van-button>
+        </view>
+      </view>
+    </view>
+
+  </van-popup>

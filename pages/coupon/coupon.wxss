@@ -1,0 +1,76 @@
+/* pages/coupon/coupon.wxss */
+.coupon {
+  display: flex;
+  justify-content: center;
+  margin: 20rpx 0;
+}
+
+.coupon-left {
+  width: 440rpx;
+  height: 230rpx;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon-right {
+  width: 250rpx;
+  height: 230rpx;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon-unused .coupon-left {
+  background-image: url("https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/coupon_left_1.png");
+}
+
+.coupon-unused .coupon-right {
+  background-image: url("https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/coupon_right_1.png");
+}
+.coupon-unused .status{
+  color: #000;
+}
+.coupon-use .status{
+  color: #9b9b9b;
+}
+.coupon-use .coupon-left {
+  background-image: url("https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/coupon_left_2.png");
+}
+
+.coupon-use .coupon-right {
+  background-image: url("https://chy-vending-1253882812.cos.ap-guangzhou.myqcloud.com/Chy.CarWash/images/coupon_right_2.png");
+}
+.coupon-left-text{
+  color: #fff;
+  justify-content: center;
+  align-content: center;
+}
+.money{
+  font-size: 52rpx;
+  font-weight: bold;
+}
+.text{
+  font-size: 42rpx;
+  padding-left: 5rpx;
+}
+.claim{
+  font-size: 24rpx;
+}
+.coupon-right-box{
+  display: flex;
+  justify-content: center;
+
+}
+.status{
+  font-size: 48rpx;
+  width: 110rpx;
+  text-align: center;
+}
+.time{
+  color: #fff;
+  font-size: 22rpx;
+  padding-top: 5rpx;
+}

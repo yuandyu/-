@@ -1,0 +1,70 @@
+/* pages/network-details/network-details.wxss */
+@import "../../components/device/device.wxss";
+@import "../../components/evaluate/evaluate.wxss";
+page {
+  background: #fff;
+}
+.network-details-business{
+  padding: 0 30rpx;
+}
+.business{
+  font-size: 24rpx;
+  color: #2b2b2b;
+  padding-top: 30rpx;
+}
+.bule{
+  color: #00a0e9;
+}
+.network-details-tabs{
+  padding-top: 45rpx;
+}
+.van-tab--active{
+  color: #00a0e9 !important;
+}
+.network-details-top{
+  display: flex;
+  padding: 40rpx 0;
+  margin: 0 30rpx;
+  border-bottom: 2rpx solid #d3d3d3;
+}
+.network-image{
+  width: 170rpx;
+  height: 170rpx;
+}
+.network-details-right{
+  padding-left: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.network-details-name{
+  font-size: 36rpx;
+  color: #000000;
+  width: 100%;
+}
+.network-details-address{
+  font-size: 24rpx;
+  color: #a0a0a0;
+  width: 100%;
+}
+.network-details-operating{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.network-details-km{
+  font-size: 22rpx;
+  color: #000000;
+}
+.network-details-btn{
+  width: 160rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: #00a0e9;
+  border: 1px solid #00a0e9;
+  border-radius: 20rpx;
+}
